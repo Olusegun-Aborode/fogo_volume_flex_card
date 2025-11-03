@@ -9,7 +9,7 @@ Outputs:
 import sqlite3
 from pathlib import Path
 from typing import Tuple
-import config
+from . import config
 
 import pandas as pd
 

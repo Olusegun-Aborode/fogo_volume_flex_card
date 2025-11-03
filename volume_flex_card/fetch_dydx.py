@@ -15,8 +15,8 @@ from pathlib import Path
 from typing import Any, Dict, List
 
 import requests
-from logging_utils import get_logger, request_with_retries
-import config
+from .logging_utils import get_logger, request_with_retries
+from . import config
 
 
 DB_PATH = Path(config.DB_PATH)
@@ -28,7 +28,7 @@ def ensure_db() -> None:
     """Ensure the database exists with required tables."""
     if not DB_PATH.exists():
         try:
-            from database_setup import init_db  # type: ignore
+            from .database_setup import init_db  # type: ignore
 
             init_db()
         except Exception as e:  # pragma: no cover

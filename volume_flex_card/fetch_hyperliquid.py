@@ -18,8 +18,8 @@ from pathlib import Path
 from typing import Any, Dict, List, Optional
 
 import requests
-from logging_utils import get_logger, request_with_retries
-import config
+from .logging_utils import get_logger, request_with_retries
+from . import config
 
 
 DB_PATH = Path(config.DB_PATH)

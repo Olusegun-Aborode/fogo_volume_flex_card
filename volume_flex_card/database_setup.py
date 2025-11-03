@@ -7,7 +7,7 @@ Creates a SQLite database `trading_volume.db` with tables:
 
 import sqlite3
 from pathlib import Path
-import config
+from . import config
 
 
 DB_PATH = Path(config.DB_PATH)

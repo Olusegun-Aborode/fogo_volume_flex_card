@@ -3,3 +3,5 @@ pandas
 python-dotenv
 web3>=6.0.0
 redis
+fastapi
+uvicorn

@@ -30,3 +30,9 @@ volume_flex_card/.env
 
 # Misc
 .DS_Store
+
+# Frontend (Next.js) artifacts
+frontend/node_modules/
+frontend/.next/
+frontend/out/
+frontend/.vercel/

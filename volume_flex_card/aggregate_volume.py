@@ -13,33 +13,33 @@ import sqlite3
 from pathlib import Path
 from typing import Any, Dict, List, Tuple
 import time
-import config
-from logging_utils import get_logger
-from cache import get_cached_volume, cache_volume
+from . import config
+from .logging_utils import get_logger
+from .cache import get_cached_volume, cache_volume
 
 # Local imports (modular usage of existing fetchers and query helpers)
-from database_setup import init_db
-from query_volume import connect, fetch_overall, fetch_by_exchange, fetch_by_wallet
+from .database_setup import init_db
+from .query_volume import connect, fetch_overall, fetch_by_exchange, fetch_by_wallet
 
 # EVM fetchers
-from fetch_hyperliquid import (
+from .fetch_hyperliquid import (
     fetch_user_fills as hl_fetch_user_fills,
     normalize_trade as hl_normalize_trade,
     insert_trades as hl_insert_trades,
 )
-from fetch_dydx import (
+from .fetch_dydx import (
     fetch_fills as dydx_fetch_fills,
     normalize_fill as dydx_normalize_fill,
     insert_trades as dydx_insert_trades,
 )
-from fetch_gmx import (
+from .fetch_gmx import (
     fetch_trades as gmx_fetch_trades,
     normalize_trade as gmx_normalize_trade,
     insert_trades as gmx_insert_trades,
 )
 
 # Solana fetcher
-from fetch_drift import (
+from .fetch_drift import (
     fetch_trades as drift_fetch_trades,
     normalize_trade as drift_normalize_trade,
     insert_trades as drift_insert_trades,
