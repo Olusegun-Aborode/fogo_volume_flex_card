@@ -1,0 +1,32 @@
+# Python artifacts
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+
+# Virtual environments
+.venv/
+venv/
+
+# IDE/editor
+.vscode/
+.idea/
+
+# Logs and caches
+*.log
+volume_aggregator.log
+
+# Databases
+trading_volume.db
+volume_flex_card/trading_volume.db
+test_trading_volume.db
+volume_flex_card/test_trading_volume.db
+
+# Env and secrets
+.env
+volume_flex_card/.env
+.env.local
+.env.*
+
+# Misc
+.DS_Store
