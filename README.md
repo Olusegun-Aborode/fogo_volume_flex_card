@@ -4,7 +4,7 @@ A modular Python toolkit to fetch, normalize, and aggregate trading volume acros
 
 ## Features
 
-- EVM Perp volume: Hyperliquid, dYdX (v4 indexer), GMX (Arbitrum) via protcol API
+- EVM Perp volume: Hyperliquid, dYdX (v4 indexer), GMX (Arbitrum) via protcol API and subgraph
 - DEX swaps: Uniswap V3 `Swap` events via Alchemy RPC (wallet attribution via `tx.from`)
 - Historical price oracle:
   - Primary: Chainlink via `web3.py` and your `ALCHEMY_ETH_URL`
