@@ -4,7 +4,7 @@ A modular Python toolkit to fetch, normalize, and aggregate trading volume acros
 
 ## Features
 
-- EVM Perp volume: Hyperliquid, dYdX (v4 indexer), GMX (Arbitrum)
+- EVM Perp volume: Hyperliquid, dYdX (v4 indexer), GMX (Arbitrum) via protcol API
 - DEX swaps: Uniswap V3 `Swap` events via Alchemy RPC (wallet attribution via `tx.from`)
 - Historical price oracle:
   - Primary: Chainlink via `web3.py` and your `ALCHEMY_ETH_URL`
@@ -117,10 +117,6 @@ Verify inserts in SQLite:
 sqlite3 volume_flex_card/trading_volume.db \
   'SELECT COUNT(*), SUM(notional_value) FROM trades WHERE exchange="Uniswap_V3" AND wallet_address="0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045";'
 ```
-
-Notes:
-- Vitalik’s recent swaps may be outside your scanned range or on Uniswap V2 (not yet implemented).
-- Broad scans over large ranges are heavy; start narrow (2k–5k blocks).
 
 ## Perp Volume Aggregation
 
