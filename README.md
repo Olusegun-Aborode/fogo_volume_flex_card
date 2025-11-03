@@ -1,4 +1,3 @@
-# fogo_volume_flex_card
 # Fogo Volume Flex Card
 
 A modular Python toolkit to fetch, normalize, and aggregate trading volume across centralized and decentralized exchanges. Includes on-chain Uniswap V3 swap ingestion via RPC, robust historical price oracle with Chainlink→CoinGecko fallback, and Redis-backed caching for fast responses.
